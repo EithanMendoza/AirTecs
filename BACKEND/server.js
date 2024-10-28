@@ -3,14 +3,8 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Configuración de CORS
-const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-};
+app.use(cors()); // Permite todas las solicitudes CORS
 
-app.use(cors(corsOptions));
 
 // Middleware para parsear JSON
 app.use(express.json());
