@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/autenticacion/register`, {
+      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/autenticacion/register`, {
         username,
         email,
         password,

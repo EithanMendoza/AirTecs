@@ -17,7 +17,7 @@ const Notificaciones = () => {
           return;
         }
 
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/notificaciones/notificaciones`, {
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/notificaciones/notificaciones`, {
           headers: { Authorization: token }
         });
 
@@ -45,7 +45,7 @@ const Notificaciones = () => {
   const borrarNotificacion = async (id) => {
     try {
       const token = localStorage.getItem('session_token');
-      await axios.delete(`${process.env.REACT_APP_API_URL}/notificaciones/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API_URL}/notificaciones/${id}`, {
         headers: { Authorization: token }
       });
       setNotificaciones(notificaciones.filter(notif => notif.id !== id)); // Actualiza el estado

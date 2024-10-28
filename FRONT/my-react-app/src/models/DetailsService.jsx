@@ -38,7 +38,7 @@ const DetailsService = () => {
     };
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/formulario/crear-solicitud`, solicitudData, {
+      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/formulario/crear-solicitud`, solicitudData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

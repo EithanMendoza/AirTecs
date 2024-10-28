@@ -12,7 +12,7 @@ const ServiciosFinalizados = () => {
         const fetchServiciosFinalizados = async () => {
             try {
                 const token = localStorage.getItem('session_token');
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/servicios-finalizados`, {
+                const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/servicios-finalizados`, {
                     headers: { Authorization: token },
                 });
                 setServicios(response.data);

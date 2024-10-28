@@ -17,7 +17,7 @@ const Logout = () => {
 
       // Realiza la solicitud POST para cerrar sesión
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/autenticacion/logout`,
+        `${import.meta.env.VITE_REACT_APP_API_URL}/autenticacion/logout`,
         {},
         {
           headers: { Authorization: token } // Añade el token en los encabezados de la solicitud

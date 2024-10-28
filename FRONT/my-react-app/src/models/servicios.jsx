@@ -23,7 +23,7 @@ const Servicios = () => {
     const fetchServicios = async () => {
       try {
         const token = localStorage.getItem('session_token');
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/formulario/curso`, {
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/formulario/curso`, {
           headers: { Authorization: token },
         });
         setServicios(response.data);

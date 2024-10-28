@@ -35,7 +35,7 @@ const CrearPerfil = () => {
       }
 
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/perfil/crear-perfil`,
+        `${import.meta.env.VITE_REACT_APP_API_URL}/perfil/crear-perfil`,
         formData,
         { headers: { Authorization: token } }
       );

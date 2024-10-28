@@ -19,7 +19,7 @@ const Pago = () => {
 
     try {
       const token = localStorage.getItem('session_token');
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/pago/realizar-pago`, {
+      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/pago/realizar-pago`, {
         metodo,
         numero_tarjeta: numeroTarjeta,
         nombre_titular: nombreTitular,
