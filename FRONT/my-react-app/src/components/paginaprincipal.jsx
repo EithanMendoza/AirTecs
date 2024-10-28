@@ -14,7 +14,7 @@ const PaginaPrincipal = () => {
       try {
         const token = localStorage.getItem('session_token');
         
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/home/servicios`, {
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/home/servicios`, {
           headers: {
             Authorization: token, // Enviar el token en el encabezado de autorización
           },
